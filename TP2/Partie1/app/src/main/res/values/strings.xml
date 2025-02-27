@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Partie1</string>
+    <string name="ret_accueil"> Retour à l\'accueil </string>
+    <string name="instr_flash"> Secoue pour allumer/éteindre le flash</string>
+</resources>

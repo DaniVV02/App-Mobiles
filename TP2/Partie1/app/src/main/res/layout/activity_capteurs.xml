@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Liste des capteurs disponibles"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="10dp" />
+
+    <ListView
+        android:id="@+id/listViewSensors"
+        android:layout_width="match_parent"
+        android:layout_height="565dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
+
+    <Button
+        android:id="@+id/btnRetourAccueil"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/options_style"
+        android:backgroundTint="#E2E4E4"
+        android:text="@string/ret_accueil"
+        android:layout_margin="1dp"/>
+
+
+</LinearLayout>

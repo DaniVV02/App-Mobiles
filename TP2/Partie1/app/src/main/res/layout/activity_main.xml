@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btnCheckCapteurs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lister les capteurs disponibles"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnCheckSensors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vérifier la présence/absence des capteurs"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnCheckAcc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tester accélerometre"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnCheckDir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tester direction"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnCheckFlash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tester Flash"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnCheckProx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tester Proximité"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnCheckLoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Regardez votre localisation"
+        android:layout_marginTop="20dp"/>
+
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Partie1</string>
+    <string name="ret_accueil"> 🏠 Back to home page </string>
+    <string name="instr_flash"> Shake to turn on/off the flash</string>
+
+
+</resources>
