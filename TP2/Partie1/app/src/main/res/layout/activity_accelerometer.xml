@@ -24,7 +24,7 @@
         android:layout_height="42dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/options_style"
-        android:backgroundTint="#E2E4E4"
+        android:backgroundTint="#AAF1FA"
         android:text="@string/ret_accueil"
         android:layout_margin="1dp"/>
 </LinearLayout>

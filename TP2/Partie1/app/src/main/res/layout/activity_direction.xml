@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@android:color/white">
+    android:background="@drawable/back2">
 
     <ImageView
         android:id="@+id/imageViewDirection"
@@ -35,6 +35,6 @@
         android:layout_margin="15dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/options_style"
-        android:backgroundTint="#E2E4E4"
+        android:backgroundTint="#AAF1FA"
         android:text="@string/ret_accueil" />
 </LinearLayout>

@@ -1,6 +1,7 @@
 package com.example.partie1
 
 import android.content.Context
+import android.content.Intent
 import android.hardware.camera2.CameraAccessException
 import android.hardware.camera2.CameraManager
 import android.hardware.Sensor
@@ -8,6 +9,7 @@ import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.ComponentActivity
 
@@ -42,6 +44,15 @@ class ShakeFlashActivity : ComponentActivity(), SensorEventListener {
 
         if (accelerometer == null) {
             textViewStatus.text = "❌ Accéléromètre non disponible"
+        }
+
+        val btnRetourAccueil = findViewById<Button>(R.id.btnRetourAccueil)
+        // Bouton retour vers l'accueil
+        btnRetourAccueil.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
+            finish()
         }
     }
 

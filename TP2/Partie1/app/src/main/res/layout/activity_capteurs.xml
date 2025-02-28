@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@drawable/back2">
 
     <TextView
         android:layout_width="wrap_content"
@@ -16,9 +17,28 @@
     <ListView
         android:id="@+id/listViewSensors"
         android:layout_width="match_parent"
-        android:layout_height="565dp"
+        android:layout_height="281dp"
+        android:layout_marginBottom="30dp"
         android:divider="@android:color/darker_gray"
         android:dividerHeight="1dp" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vérification des capteurs"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:paddingTop="10dp"
+        android:layout_marginBottom="15dp"/>
 
     <Button
         android:id="@+id/btnRetourAccueil"
@@ -26,7 +46,7 @@
         android:layout_height="42dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/options_style"
-        android:backgroundTint="#E2E4E4"
+        android:backgroundTint="#AAF1FA"
         android:text="@string/ret_accueil"
         android:layout_margin="1dp"/>
 

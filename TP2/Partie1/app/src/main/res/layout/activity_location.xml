@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="16dp"
-    android:background="@android:color/white">
+    android:background="@drawable/back2">
 
     <TextView
         android:id="@+id/textViewLocation"
@@ -15,7 +15,8 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@android:color/black"
-        android:padding="20dp"/>
+        android:padding="20dp"
+        android:gravity="center"/>
 
     <Button
         android:id="@+id/buttonOpenMaps"
@@ -24,4 +25,14 @@
         android:text="📍 Ouvrir Google Maps"
         android:padding="10dp"
         android:enabled="false"/>
+
+    <Button
+        android:id="@+id/btnRetourAccueil"
+        android:layout_width="366dp"
+        android:layout_height="42dp"
+        android:layout_margin="15dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/options_style"
+        android:backgroundTint="#AAF1FA"
+        android:text="@string/ret_accueil" />
 </LinearLayout>

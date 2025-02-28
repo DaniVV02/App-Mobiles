@@ -42,11 +42,6 @@
             android:label="@string/app_name"
             android:theme="@style/Theme.Partie1"/>
         <activity
-            android:name=".SensorCheckActivity"
-            android:exported="false"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.Partie1"/>
-        <activity
             android:name=".AccelerometerActivity"
             android:exported="false"
             android:label="@string/app_name"

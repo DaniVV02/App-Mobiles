@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="16dp"
-    android:background="@android:color/white">
+    android:background="@drawable/back2">
 
     <TextView
         android:id="@+id/textViewStatus"
@@ -21,5 +21,16 @@
         android:id="@+id/imageViewProximity"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/far"/>
+        android:src="@drawable/far"
+        android:layout_marginBottom="15dp"/>
+
+    <Button
+        android:id="@+id/btnRetourAccueil"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@drawable/options_style"
+        android:backgroundTint="#AAF1FA"
+        android:text="@string/ret_accueil"
+        android:layout_margin="1dp"
+        />
 </LinearLayout>

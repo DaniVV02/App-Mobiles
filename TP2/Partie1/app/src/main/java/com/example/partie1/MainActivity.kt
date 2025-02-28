@@ -6,6 +6,7 @@ import android.hardware.SensorManager
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.ListView
 import androidx.activity.ComponentActivity
 
@@ -15,40 +16,34 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val btnCapt = findViewById<Button>(R.id.btnCheckCapteurs)
-        val btnSens = findViewById<Button>(R.id.btnCheckSensors)
-        val btnAcc = findViewById<Button>(R.id.btnCheckAcc)
-        val btnDir = findViewById<Button>(R.id.btnCheckDir)
-        val btnFlash = findViewById<Button>(R.id.btnCheckFlash)
-        val btnProx = findViewById<Button>(R.id.btnCheckProx)
-        val btnLoc = findViewById<Button>(R.id.btnCheckLoc)
+        val imgCapt = findViewById<ImageView>(R.id.imgCheckCapteurs)
+        val imgAcc = findViewById<ImageView>(R.id.imgCheckAcc)
+        val imgDir = findViewById<ImageView>(R.id.imgCheckDir)
+        val imgFlash = findViewById<ImageView>(R.id.imgCheckFlash)
+        val imgProx = findViewById<ImageView>(R.id.imgCheckProx)
+        val imgLoc = findViewById<ImageView>(R.id.imgCheckLoc)
 
-
-        btnCapt.setOnClickListener {
+        imgCapt.setOnClickListener {
             startActivity(Intent(this, ListeCapteursActivity::class.java))
         }
 
-        btnSens.setOnClickListener {
-            startActivity(Intent(this, SensorCheckActivity::class.java))
-        }
-
-        btnAcc.setOnClickListener{
+        imgAcc.setOnClickListener{
             startActivity(Intent(this, AccelerometerActivity :: class.java))
         }
 
-        btnDir.setOnClickListener{
+        imgDir.setOnClickListener{
             startActivity(Intent(this, DirectionActivity::class.java))
         }
 
-        btnFlash.setOnClickListener{
+        imgFlash.setOnClickListener{
             startActivity(Intent(this, ShakeFlashActivity::class.java))
         }
 
-        btnProx.setOnClickListener{
+        imgProx.setOnClickListener{
             startActivity(Intent(this, ProximityActivity::class.java))
         }
 
-        btnLoc.setOnClickListener {
+        imgLoc.setOnClickListener {
             startActivity(Intent(this, LocationActivity::class.java))
         }
     }

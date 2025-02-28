@@ -1,57 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="10dp"
+    android:background="@drawable/back2">
 
-    <Button
-        android:id="@+id/btnCheckCapteurs"
+    <TextView
+        android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lister les capteurs disponibles"
-        android:layout_marginTop="20dp"/>
+        android:text="Partie 1 - Les Capteurs"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/michroma_regular" />
 
-    <Button
-        android:id="@+id/btnCheckSensors"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Vérifier la présence/absence des capteurs"
-        android:layout_marginTop="20dp"/>
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_marginStart="-5dp"
+        >
 
-    <Button
-        android:id="@+id/btnCheckAcc"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="15dp"
+            android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/imgCheckCapteurs"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:src="@drawable/sens_icon"
+            android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="172dp"
+                android:layout_height="wrap_content"
+                android:text="Lister et vérifier la disponibilité des capteurs"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:fontFamily="@font/michroma_regular"
+                android:layout_marginBottom="10dp"
+                android:textColor="#55C35A"/>
+
+        <ImageView
+            android:id="@+id/imgCheckDir"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/acc_icon"
+            android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="172dp"
+                android:layout_height="wrap_content"
+                android:text="Tester le gyroscope"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:fontFamily="@font/michroma_regular"
+                android:layout_marginBottom="15dp"/>
+
+        <ImageView
+            android:id="@+id/imgCheckProx"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:src="@drawable/proximity_icon"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="172dp"
+                android:layout_height="wrap_content"
+                android:text="Tester le capteur de proximité"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:fontFamily="@font/michroma_regular"
+                android:textColor="#43C0D0"/>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tester accélerometre"
-        android:layout_marginTop="20dp"/>
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="10dp"
+        >
 
-    <Button
-        android:id="@+id/btnCheckDir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tester direction"
-        android:layout_marginTop="20dp"/>
+        <ImageView
+            android:id="@+id/imgCheckAcc"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/speed_icon"
+            />
 
-    <Button
-        android:id="@+id/btnCheckFlash"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tester Flash"
-        android:layout_marginTop="20dp"/>
+        <TextView
+            android:layout_width="172dp"
+            android:layout_height="wrap_content"
+            android:text="Tester l'accéléromètre"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:fontFamily="@font/michroma_regular"
+            android:layout_marginBottom="20dp"
+            android:textColor="#D0C13C"/>
 
-    <Button
-        android:id="@+id/btnCheckProx"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tester Proximité"
-        android:layout_marginTop="20dp"/>
+        <ImageView
+            android:id="@+id/imgCheckFlash"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:src="@drawable/flash_icon"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="25dp"
 
-    <Button
-        android:id="@+id/btnCheckLoc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Regardez votre localisation"
-        android:layout_marginTop="20dp"/>
+            />
 
+        <TextView
+            android:layout_width="118dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/michroma_regular"
+            android:gravity="center"
+            android:text="Allumer le flash"
+            android:textStyle="bold"
+            android:textColor="#354496"
+            />
 
+        <ImageView
+            android:id="@+id/imgCheckLoc"
+            android:layout_width="120dp"
+            android:layout_height="110dp"
+            android:src="@drawable/geoloca_icon"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="-8dp"
+            />
+
+        <TextView
+            android:layout_width="154dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Regarder ma localisation"
+            android:textStyle="bold"
+            android:fontFamily="@font/michroma_regular"
+            android:textColor="#CB0909"/>
+    </LinearLayout>
+
+</LinearLayout>
 </LinearLayout>

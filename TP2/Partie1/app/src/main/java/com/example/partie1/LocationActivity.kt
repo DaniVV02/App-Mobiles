@@ -3,6 +3,7 @@ package com.example.partie1
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.location.Geocoder
 import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
@@ -14,6 +15,7 @@ import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import java.util.Locale
 
 class LocationActivity : ComponentActivity(), LocationListener {
 
@@ -41,10 +43,20 @@ class LocationActivity : ComponentActivity(), LocationListener {
 
         // Ouvrir Google Maps avec la position actuelle
         buttonOpenMaps.setOnClickListener {
-            val uri = "geo:$currentLatitude,$currentLongitude?q=$currentLatitude,$currentLongitude"
+            val address = getAddress(currentLatitude, currentLongitude)
+            val uri = "geo:0,0?q=${Uri.encode(address)}"
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(uri))
             intent.setPackage("com.google.android.apps.maps") // Ouvre directement Google Maps
             startActivity(intent)
+        }
+
+        val btnRetourAccueil = findViewById<Button>(R.id.btnRetourAccueil)
+        // Bouton retour vers l'accueil
+        btnRetourAccueil.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
+            finish()
         }
     }
 
@@ -66,7 +78,9 @@ class LocationActivity : ComponentActivity(), LocationListener {
     override fun onLocationChanged(location: Location) {
         currentLatitude = location.latitude
         currentLongitude = location.longitude
-        textViewLocation.text = "📍 Latitude : $currentLatitude\n📍 Longitude : $currentLongitude"
+        val address = getAddress(currentLatitude, currentLongitude)
+
+        textViewLocation.text = "📍 Latitude : $currentLatitude\n📍 Longitude : $currentLongitude\n\uD83D\uDCCC Adresse : $address"
         buttonOpenMaps.isEnabled = true
     }
 
@@ -79,5 +93,20 @@ class LocationActivity : ComponentActivity(), LocationListener {
         Toast.makeText(this, "⚠️ GPS désactivé. Activez-le dans les paramètres.", Toast.LENGTH_LONG).show()
         textViewLocation.text = "⚠️ GPS désactivé. Activez-le pour voir votre position."
         buttonOpenMaps.isEnabled = false
+    }
+
+    private fun getAddress(latitude: Double, longitude: Double): String {
+        return try {
+            val geocoder = Geocoder(this, Locale.getDefault())
+            val addresses = geocoder.getFromLocation(latitude, longitude, 1)
+            if (addresses != null && addresses.isNotEmpty()) {
+                val address = addresses[0]
+                "${address.locality}, ${address.countryName}\n${address.getAddressLine(0)}"
+            } else {
+                "Adresse non disponible"
+            }
+        } catch (e: Exception) {
+            "Erreur lors de la récupération de l'adresse"
+        }
     }
 }
