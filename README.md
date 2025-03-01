@@ -39,6 +39,7 @@ Développer une application qui :
 
 #### Exercice 1 : Liste de capteurs disponibles
 Nous avons développé une application qui récupère et affiche la liste des capteurs disponibles sur le smartphone.
+
 👉 Utilisation du SensorManager pour récupérer les capteurs et les afficher dans un ListView, et ArrayAdapter pour lier les données à la ListView.
 
 ✔ Résultat attendu : L’application affiche une liste des capteurs (ex. : Accéléromètre, Gyroscope, etc.).
@@ -46,7 +47,7 @@ Nous avons développé une application qui récupère et affiche la liste des ca
 #### Exercice 2 : Détection de présence/absence de capteurs
 Cet exercice vérifie la disponibilité de certains capteurs (accéléromètre, gyroscope, etc.) et informe l'utilisateur si un capteur est absent.
 
-**Méthode utilisée** :
+👉 **Méthode utilisée** :
 
 - Vérification avec getDefaultSensor(Sensor.TYPE_xxx).
 - Affichage dynamique des capteurs disponibles ✅ et indisponibles ❌.
