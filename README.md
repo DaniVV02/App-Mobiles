@@ -144,10 +144,15 @@ Créer une application avec deux activités :
 
 #### Implémentation
 1️⃣ Création d’un RecyclerView dans MainActivity avec une liste de pays statique.
+
 2️⃣ Création de Pays.kt pour stocker les informations (nom, capitale, population).
+
 3️⃣ Création d’un RecyclerView.Adapter (PaysAdapter.kt) pour gérer l’affichage de la liste. Donc chaque pays a son propre design d'item
+
 4️⃣ Ajout d’un OnClickListener dans l’adaptateur pour détecter le clic sur un pays.
+
 5️⃣ Passage des données via un Intent vers DetailActivity.
+
 6️⃣ Affichage des informations du pays sélectionné dans DetailActivity.
 
 
@@ -167,9 +172,13 @@ Bundle pour passer les informations du pays sélectionné.
 
  #### Implémentation
 1️⃣ Création de Pays.kt, une classe data class pour représenter un pays.
+
 2️⃣ Création de ListePaysFragment.kt, un fragment affichant la liste des pays avec RecyclerView.
+
 3️⃣ Création de DetailsPaysFragment.kt, un fragment affichant les détails d’un pays.
+
 4️⃣ Création de ImgPaysFragment.kt, un fragment affichant l'image associé au pays séléctionné.
+
 5️⃣ Gestion de la navigation dans Exo9Activity.kt, qui charge dynamiquement les fragments selon l’écran.
 
 
