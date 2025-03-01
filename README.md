@@ -32,9 +32,9 @@ Cette première partie du TP explore l’utilisation des capteurs d’un smartph
 
 #### Objectif
 Développer une application qui :
-✔ Affiche la liste des capteurs disponibles sur l’appareil en utilisant ListView.
-✔ Indique si des capteurs spécifiques (accéléromètre, proximité...) sont présents ou non.
-✔ Permet d'afficher des détails sur un capteur en cliquant dessus.
+- Affiche la liste des capteurs disponibles sur l’appareil en utilisant ListView.
+- Indique si des capteurs spécifiques (accéléromètre, proximité...) sont présents ou non.
+- Permet d'afficher des détails sur un capteur en cliquant dessus.
 
 
 #### Exercice 1 : Liste de capteurs disponibles
