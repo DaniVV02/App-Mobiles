@@ -16,11 +16,11 @@ class ListeCapteursActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_capteurs)
 
-        // Récupérer le gestionnaire des capteurs
+        // Récupérer le gest des capteurs
         val sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
         val sensorList: List<Sensor> = sensorManager.getSensorList(Sensor.TYPE_ALL)
 
-        // Extraire les noms des capteurs
+        // pour extraire les noms des capteurs
         val sensorNames = sensorList.map { it.name }
 
         // Trouver le ListView et y attacher un adaptateur
@@ -31,7 +31,7 @@ class ListeCapteursActivity : ComponentActivity() {
 
         val textViewResult = findViewById<TextView>(R.id.textViewResult)
 
-        // Liste des capteurs à vérifier
+        // Liste des capteurs à vérif
         val sensorsToCheck = mapOf(
             "Accéléromètre" to Sensor.TYPE_ACCELEROMETER,
             "Gyroscope" to Sensor.TYPE_GYROSCOPE,
@@ -63,7 +63,7 @@ class ListeCapteursActivity : ComponentActivity() {
             }
         }
 
-        // Affichage des résultats
+        // résultats
         val message = StringBuilder("🔎 Vérification des capteurs :\n\n")
         message.append(availableSensors.joinToString("\n") + "\n\n")
         message.append(missingSensors.joinToString("\n"))

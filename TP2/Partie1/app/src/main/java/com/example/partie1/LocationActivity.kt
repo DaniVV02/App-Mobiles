@@ -41,12 +41,12 @@ class LocationActivity : ComponentActivity(), LocationListener {
             requestLocation()
         }
 
-        // Ouvrir Google Maps avec la position actuelle
+        // Pour ouvrir Google Maps avec la position actuelle
         buttonOpenMaps.setOnClickListener {
             val address = getAddress(currentLatitude, currentLongitude)
             val uri = "geo:0,0?q=${Uri.encode(address)}"
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(uri))
-            intent.setPackage("com.google.android.apps.maps") // Ouvre directement Google Maps
+            intent.setPackage("com.google.android.apps.maps") // ouvrir directement Google Maps
             startActivity(intent)
         }
 
@@ -63,15 +63,15 @@ class LocationActivity : ComponentActivity(), LocationListener {
     private fun requestLocation() {
         try {
             if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-                Toast.makeText(this, "⚠️ GPS désactivé. Activez-le pour voir votre position.", Toast.LENGTH_LONG).show()
-                textViewLocation.text = "⚠️ GPS désactivé. Activez-le dans les paramètres."
+                Toast.makeText(this, "GPS désactivé. Activez-le pour voir votre position.", Toast.LENGTH_LONG).show()
+                textViewLocation.text = "GPS désactivé. Activez-le dans les paramètres."
                 buttonOpenMaps.isEnabled = false
                 return
             }
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 5f, this)
 
         } catch (e: SecurityException) {
-            textViewLocation.text = "⚠️ Permission non accordée"
+            textViewLocation.text = "Permission non accordée"
         }
     }
 
@@ -86,12 +86,12 @@ class LocationActivity : ComponentActivity(), LocationListener {
 
     override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?) {}
     override fun onProviderEnabled(provider: String) {
-        Toast.makeText(this, "✅ GPS activé ! Recherche de votre position...", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "GPS activé ! Recherche de votre position...", Toast.LENGTH_SHORT).show()
         requestLocation()
     }
     override fun onProviderDisabled(provider: String) {
-        Toast.makeText(this, "⚠️ GPS désactivé. Activez-le dans les paramètres.", Toast.LENGTH_LONG).show()
-        textViewLocation.text = "⚠️ GPS désactivé. Activez-le pour voir votre position."
+        Toast.makeText(this, "GPS désactivé. Activez-le dans les paramètres.", Toast.LENGTH_LONG).show()
+        textViewLocation.text = "GPS désactivé. Activez-le pour voir votre position."
         buttonOpenMaps.isEnabled = false
     }
 

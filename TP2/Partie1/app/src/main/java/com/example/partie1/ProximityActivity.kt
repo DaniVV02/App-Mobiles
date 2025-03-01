@@ -76,7 +76,6 @@ class ProximityActivity : ComponentActivity(), SensorEventListener {
     }
 
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
-        // Pas besoin d'implémenter cela
     }
 
 }

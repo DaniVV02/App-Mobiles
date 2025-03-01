@@ -30,7 +30,7 @@ class AccelerometerActivity : ComponentActivity() , SensorEventListener{
         accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
 
         if (accelerometer == null) {
-            textViewValues.text = "❌ Accéléromètre non disponible sur cet appareil"
+            textViewValues.text = "Accéléromètre non disponible sur cet appareil"
         }
 
         val btnRetourAccueil = findViewById<Button>(R.id.btnRetourAccueil)
@@ -63,14 +63,14 @@ class AccelerometerActivity : ComponentActivity() , SensorEventListener{
             val y = event.values[1]
             val z = event.values[2]
 
-            // Calculer l'intensité de l'accélération
+            // ici on calcule l'intensité de l'accélération - gravité pour que ça soit = 0
             val acceleration = Math.sqrt((x * x + y * y + z * z).toDouble()).toFloat() - gravity
 
-            // Définir la couleur en fonction des valeurs
+            // couleur de fond en fonction des valeurs
             when {
-                acceleration < 2 -> layout.setBackgroundColor(getColor(R.color.green)) // Valeurs basses
-                acceleration in 2.0..5.0 -> layout.setBackgroundColor(getColor(R.color.black))  // Valeurs moyennes
-                acceleration > 8 -> layout.setBackgroundColor(getColor(R.color.red))  // Valeurs hautes
+                acceleration < 2 -> layout.setBackgroundColor(getColor(R.color.green)) // vitesse basse
+                acceleration in 2.0..5.0 -> layout.setBackgroundColor(getColor(R.color.black))  // vitesse moyenne
+                acceleration > 8 -> layout.setBackgroundColor(getColor(R.color.red))  // haute vitesse
             }
 
             // Affichage des valeurs dans le TextView
@@ -79,7 +79,7 @@ class AccelerometerActivity : ComponentActivity() , SensorEventListener{
     }
 
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
-        // Ne rien faire pour cet exercice
+
     }
 
 }

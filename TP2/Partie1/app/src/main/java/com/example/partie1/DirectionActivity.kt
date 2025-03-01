@@ -31,7 +31,7 @@ class DirectionActivity : ComponentActivity(), SensorEventListener {
         accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
 
         if (accelerometer == null) {
-            textViewDirection.text = "❌ Accéléromètre non disponible"
+            textViewDirection.text = "Accéléromètre non disponible"
         }
 
         val btnRetourAccueil = findViewById<Button>(R.id.btnRetourAccueil)
@@ -76,6 +76,5 @@ class DirectionActivity : ComponentActivity(), SensorEventListener {
     }
 
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
-        // Ne rien faire pour cet exercice
     }
 }

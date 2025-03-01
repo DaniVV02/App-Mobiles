@@ -38,7 +38,7 @@ class ShakeFlashActivity : ComponentActivity(), SensorEventListener {
         imageViewDark.visibility = android.view.View.GONE // Caché au départ
 
 
-        // Initialisation du capteur d'accélération
+        // Initialisation du capteur d'accélération pour le sécouement
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
 
@@ -86,7 +86,6 @@ class ShakeFlashActivity : ComponentActivity(), SensorEventListener {
     }
 
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
-        // Ne rien faire
     }
 
     private fun toggleFlash() {
@@ -97,18 +96,18 @@ class ShakeFlashActivity : ComponentActivity(), SensorEventListener {
                 cameraManager.setTorchMode(cameraId, true) // Allume le flash
                 textViewStatus.text = "💡 Flash allumé"
                 imageViewGif.visibility = android.view.View.VISIBLE // Affiche le GIF
-                imageViewDark.visibility = android.view.View.GONE // Affiche le GIF
+                imageViewDark.visibility = android.view.View.GONE // Cache le GIF
 
             } else {
                 cameraManager.setTorchMode(cameraId, false) // Éteint le flash
                 textViewStatus.text = "\uD83C\uDF11\uD83D\uDD6F\uFE0F Flash éteint"
                 imageViewGif.visibility = android.view.View.GONE // Cache le GIF
-                imageViewDark.visibility = android.view.View.VISIBLE // Cache le GIF
+                imageViewDark.visibility = android.view.View.VISIBLE // Affiche le GIF
 
             }
             isFlashOn = !isFlashOn
         } catch (e: CameraAccessException) {
-            textViewStatus.text = "❌ Erreur : Flash non disponible"
+            textViewStatus.text = "Erreur : Flash non disponible"
         }
     }
 }
