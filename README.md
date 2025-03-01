@@ -46,7 +46,7 @@ Nous avons développé une application qui récupère et affiche la liste des ca
 #### Exercice 2 : Détection de présence/absence de capteurs
 Cet exercice vérifie la disponibilité de certains capteurs (accéléromètre, gyroscope, etc.) et informe l'utilisateur si un capteur est absent.
 
-##### Méthode utilisée :
+**Méthode utilisée** :
 
 - Vérification avec getDefaultSensor(Sensor.TYPE_xxx).
 - Affichage dynamique des capteurs disponibles ✅ et indisponibles ❌.
@@ -57,7 +57,7 @@ Cet exercice vérifie la disponibilité de certains capteurs (accéléromètre, 
 #### Exercice 3 : Changement de couleur selon l’accéléromètre
 L’application change la couleur du fond d’écran en fonction de l’intensité du mouvement détecté par l’accéléromètre.
 
-👉 Méthode utilisée :
+👉 **Méthode utilisée** :
 
 - Lecture des valeurs de l’accéléromètre (x, y, z).
 - Calcul de l’accélération totale.
@@ -71,7 +71,7 @@ L’application change la couleur du fond d’écran en fonction de l’intensit
 #### Exercice 4 : Détection de direction
 Nous avons implémenté une application qui détecte la direction du mouvement (gauche, droite, haut, bas) à l’aide de l’accéléromètre.
 
-👉 Méthode utilisée :
+👉 **Méthode utilisée** :
 
 - Lecture des valeurs x et y du capteur.
 - Définition des seuils :
@@ -86,7 +86,7 @@ Nous avons implémenté une application qui détecte la direction du mouvement (
 #### Exercice 5 : Allumer/Éteindre le flash en secouant le téléphone
 Cet exercice permet d’allumer et d’éteindre le flash en secouant le téléphone.
 
-👉 Méthode utilisée :
+👉 **Méthode utilisée** :
 
 - Détection d’un secouement via l’accéléromètre (seuil > 12 m/s²).
 - Utilisation de l’API Camera pour activer/désactiver le flash.
@@ -97,7 +97,7 @@ Cet exercice permet d’allumer et d’éteindre le flash en secouant le télép
 #### Exercice 6 : Détection de proximité
 L’application affiche une image de chaton correspondant à la proximité d’un objet devant le téléphone grâce au capteur de proximité.
 
-👉 Méthode utilisée :
+👉 **Méthode utilisée**:
 
 - Lecture des valeurs du capteur de proximité (distance en cm).
 - Affichage d’une image différente selon la distance :
@@ -110,7 +110,7 @@ L’application affiche une image de chaton correspondant à la proximité d’u
 #### Exercice 7 : Géolocalisation et ouverture de Google Maps
 Cet exercice permet de récupérer et afficher la position géographique de l’utilisateur et d’ouvrir Google Maps pour afficher son emplacement.
 
-👉 Méthode utilisée :
+👉 **Méthode utilisée** :
 
 - Utilisation du LocationManager pour récupérer latitude et longitude.
 - Conversion des coordonnées en adresse complète avec Geocoder.
