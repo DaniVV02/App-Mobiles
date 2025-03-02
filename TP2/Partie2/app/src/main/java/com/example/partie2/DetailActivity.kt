@@ -22,6 +22,9 @@ class DetailActivity : ComponentActivity() {
             "Perou" -> R.layout.detail_perou
             "Espagne" -> R.layout.detail_espagne
             "Brazil" -> R.layout.detail_brazil
+            "Argentine" -> R.layout.detail_argentine
+            "Egypte" -> R.layout.detail_egypte
+
 
             else -> R.layout.activity_detail
         }
@@ -35,7 +38,7 @@ class DetailActivity : ComponentActivity() {
         // Bouton retour vers l'accueil
         btnRetourAccueil.setOnClickListener {
             val intent = Intent(this, Exo8Activity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+            intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
             startActivity(intent)
             finish()
         }

@@ -17,6 +17,9 @@ class PaysAdapter(private val paysList: List<Pays>, private val onItemClick: (Pa
             "Espagne" -> 3
             "Perou" -> 4
             "Brazil" -> 5
+            "Argentine" -> 6
+            "Egypte" -> 7
+
             else -> 1 // par défaut
         }
     }
@@ -28,6 +31,9 @@ class PaysAdapter(private val paysList: List<Pays>, private val onItemClick: (Pa
             3 -> R.layout.item_espagne //  l'Espagne
             4 -> R.layout.item_perou //  pour le perou
             5 -> R.layout.item_brazil //  pour le brésil
+            6 -> R.layout.item_arg //  pour l'argentine
+            7 -> R.layout.item_egypt //  pour l'egypte
+
 
             else -> R.layout.item_pays  // par défaut
         }
@@ -47,6 +53,9 @@ class PaysAdapter(private val paysList: List<Pays>, private val onItemClick: (Pa
             "Espagne" -> holder.imagePays.setImageResource(R.drawable.espagne)
             "Perou" -> holder.imagePays.setImageResource(R.drawable.perou)
             "Brazil" -> holder.imagePays.setImageResource(R.drawable.brazil)
+            "Argentine" -> holder.imagePays.setImageResource(R.drawable.drap_arg)
+            "Egypte" -> holder.imagePays.setImageResource(R.drawable.drap_egypt)
+
 
             else -> holder.imagePays.setImageResource(R.drawable.france)
         }

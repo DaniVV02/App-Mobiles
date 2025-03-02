@@ -3,23 +3,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/countries">
+    android:background="@color/white"
+    android:padding="20dp">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="592dp"
-        android:layout_marginBottom="20dp"/>
+        android:layout_height="410dp"
+        android:layout_marginBottom="20dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="331dp"
+
+        android:src="@drawable/fond_countries" />
 
     <Button
         android:id="@+id/btnRetourAccueil"
         android:layout_width="match_parent"
         android:layout_height="42dp"
-        android:layout_marginTop="16dp"
         android:background="@drawable/button_style"
         android:backgroundTint="#E2E4E4"
         android:text="Retour"
-        android:layout_margin="1dp"/>
+        android:layout_margin="15dp"/>
 
 
 </LinearLayout>

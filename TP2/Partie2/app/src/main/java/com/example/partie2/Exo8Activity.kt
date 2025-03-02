@@ -20,7 +20,9 @@ class Exo8Activity : ComponentActivity() {
             Pays("Allemagne", "Berlin", 83000000),
             Pays("Espagne", "Madrid", 49000000),
             Pays("Perou", "Lima", 31914989),
-            Pays("Brazil", "Brasilia", 212583000)
+            Pays("Brazil", "Brasilia", 212583000),
+            Pays("Argentine", "Buenos Aires", 46000000),
+            Pays("Egypte", "Le Caire", 106000000)
 
         )
 
@@ -32,6 +34,9 @@ class Exo8Activity : ComponentActivity() {
                 "Perou" -> R.layout.detail_perou
                 "Espagne" -> R.layout.detail_espagne
                 "Brazil" -> R.layout.detail_brazil
+                "Argentine" -> R.layout.detail_argentine
+                "Egypte" -> R.layout.detail_egypte
+
 
                 else -> R.layout.activity_detail
             }
