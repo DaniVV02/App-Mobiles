@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Liste des utilisateurs"
+        android:textAlignment="center"
+        android:textColor="#4A4F53"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        android:fontFamily="@font/poppins_medium"/>
+
+    <ListView
+        android:id="@+id/listeUtilisateurs"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/btnRetour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retour"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#212020"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_bold"/>
+    <Button
+        android:id="@+id/btnToutEffacer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tout effacer  🧹"
+        android:layout_gravity="center"
+        android:backgroundTint="#9e1b1b"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="16dp"/>
+
+</LinearLayout>

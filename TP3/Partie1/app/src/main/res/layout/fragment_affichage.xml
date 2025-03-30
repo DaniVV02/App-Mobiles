@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/round_corner_general"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/tvTitre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vos informations"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <TextView
+            android:id="@+id/tvInfos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chargement..."
+            android:textSize="16sp"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/btnRetour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Retour"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#212020"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_bold"/>
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>

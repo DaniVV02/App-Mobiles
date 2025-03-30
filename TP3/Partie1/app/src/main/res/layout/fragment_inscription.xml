@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/round_corner_general"
+        android:padding="20dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:src="@drawable/profile_users" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Créez un nouveau compte"
+            android:textAlignment="center"
+            android:textColor="#4A4F53"
+            android:textSize="28sp"
+            android:textStyle="italic"
+            android:fontFamily="@font/poppins_medium"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="31dp"
+                android:fontFamily="@font/dm_sans"
+                android:text="Vous êtes déjà inscrit·e ?"
+                android:textAlignment="center"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:id="@+id/tvVersLogin"
+                android:layout_width="161dp"
+                android:layout_height="31dp"
+                android:fontFamily="@font/dm_sans"
+                android:text=" Connectez-vous ici."
+                android:clickable="true"
+                android:focusable="true"
+                android:textStyle="bold"
+                 />
+
+
+        </LinearLayout>
+
+
+        <!-- NOM et PRENOM-->
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NOM ET PRÉNOM"
+            android:layout_marginLeft="12dp"
+            android:fontFamily="@font/dm_sans" />
+        <EditText
+            android:id="@+id/etNom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Vargas Vila Daniel"
+            android:textColorHint="#AEABAB"
+            android:drawableLeft="@drawable/icone_user"
+            android:drawablePadding="10dp"
+            android:background="@drawable/round_corner"
+            android:layout_margin="8dp"
+            android:padding="15dp"
+            android:backgroundTint="#30B1AEAE"
+            android:textSize="14dp"
+            android:textStyle="italic"
+            android:fontFamily="@font/poppins_light"
+            />
+
+        <!-- NOM UTILISATEUR -->
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NOM UTILISATEUR"
+            android:layout_marginLeft="12dp"
+            android:fontFamily="@font/dm_sans" />
+        <EditText
+            android:id="@+id/etUtilisateur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="DanVV (maximum 10 caractères)"
+            android:textColorHint="#AEABAB"
+            android:drawableLeft="@drawable/icone_user"
+            android:drawablePadding="10dp"
+            android:background="@drawable/round_corner"
+            android:layout_margin="8dp"
+            android:padding="15dp"
+            android:backgroundTint="#30B1AEAE"
+            android:textSize="14dp"
+            android:textStyle="italic"
+            android:fontFamily="@font/poppins_light" />
+
+        <!-- DATE NAISSANCE -->
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DATE DE NAISSANCE"
+            android:layout_marginLeft="12dp"
+            android:fontFamily="@font/dm_sans" />
+        <EditText
+            android:id="@+id/etDateNaissance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="DD/MM/AAAA"
+            android:textColorHint="#AEABAB"
+            android:inputType="date"
+            android:drawableLeft="@drawable/age_icon"
+            android:drawablePadding="10dp"
+            android:background="@drawable/round_corner"
+            android:layout_margin="8dp"
+            android:padding="15dp"
+            android:backgroundTint="#30B1AEAE"
+            android:textStyle="italic"
+            android:textSize="14dp" />
+
+        <!-- TELEPHONE -->
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TÉLÉPHONE"
+            android:layout_marginLeft="12dp"
+            android:fontFamily="@font/dm_sans"/>
+        <EditText
+            android:id="@+id/etTelephone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="+33 06 78 84 73 45"
+            android:textColorHint="#AEABAB"
+            android:inputType="phone"
+            android:drawableLeft="@drawable/phone_icon"
+            android:drawablePadding="10dp"
+            android:background="@drawable/round_corner"
+            android:layout_margin="8dp"
+            android:padding="15dp"
+            android:backgroundTint="#30B1AEAE"
+            android:textSize="14dp"
+            android:textStyle="italic" />
+
+        <!-- EMAIL -->
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="E-MAIL"
+            android:layout_marginLeft="12dp"
+            android:fontFamily="@font/dm_sans"/>
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="example@gmail.com"
+            android:textColorHint="#AEABAB"
+            android:inputType="textEmailAddress"
+            android:drawableLeft="@drawable/mail_icon"
+            android:drawablePadding="10dp"
+            android:background="@drawable/round_corner"
+            android:layout_margin="8dp"
+            android:padding="15dp"
+            android:backgroundTint="#30B1AEAE"
+            android:textSize="14dp"
+            android:textStyle="italic" />
+
+        <!-- MOT DE PASSE -->
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MOT DE PASSE"
+            android:layout_marginLeft="12dp"
+            android:fontFamily="@font/dm_sans"/>
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="6 caractères minimum"
+            android:textColorHint="#AEABAB"
+
+            android:inputType="textPassword"
+            android:drawableLeft="@drawable/password_icon"
+            android:drawablePadding="10dp"
+            android:background="@drawable/round_corner"
+            android:layout_margin="8dp"
+            android:padding="15dp"
+            android:backgroundTint="#30B1AEAE"
+            android:textSize="14dp"
+            android:textStyle="italic" />
+
+        <!-- CENTRES D'INTÉRÊT -->
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Centres d’intérêt"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="16sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="5dp">
+
+            <CheckBox android:id="@+id/cbSport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sport"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/poppins_light"/>
+
+            <CheckBox android:id="@+id/cbMusique"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Musique"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/poppins_light"/>
+
+            <CheckBox android:id="@+id/cbLecture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lecture"
+                android:fontFamily="@font/poppins_light"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="5dp">
+
+            <CheckBox android:id="@+id/cbJV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jeux-vidéos"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/poppins_light"/>
+
+            <CheckBox android:id="@+id/cbCinema"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cinéma"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/poppins_light"/>
+
+            <CheckBox android:id="@+id/cbDanse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Danse"
+                android:fontFamily="@font/poppins_light"/>
+        </LinearLayout>
+
+
+        <!-- BOUTON SOUMETTRE -->
+        <Button
+            android:id="@+id/btnSoumettre"
+            android:layout_width="256dp"
+            android:layout_height="39dp"
+            android:text="Soumettre"
+            android:textColor="@color/white"
+            android:backgroundTint="#212020"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_bold"/>
+    </LinearLayout>
+</ScrollView>

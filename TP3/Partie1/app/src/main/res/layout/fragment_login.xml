@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/round_corner_general"
+        android:padding="20dp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:src="@drawable/profile_users" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Se connecter"
+            android:textAlignment="center"
+            android:textColor="#4A4F53"
+            android:textSize="28sp"
+            android:textStyle="italic"
+            android:fontFamily="@font/poppins_medium"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:text="Connectez-vous pour continuer."
+            android:textAlignment="center"
+            android:fontFamily="@font/dm_sans"/>
+
+
+
+        <!-- EMAIL -->
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="E-MAIL OU NOM UTILISATEUR"
+            android:layout_marginLeft="12dp" />
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="example@gmail.com"
+            android:textColorHint="#AEABAB"
+            android:inputType="textEmailAddress"
+            android:drawableLeft="@drawable/mail_icon"
+            android:drawablePadding="10dp"
+            android:background="@drawable/round_corner"
+            android:layout_margin="8dp"
+            android:padding="15dp"
+            android:backgroundTint="#30B1AEAE"
+            android:textSize="14dp"
+            android:textStyle="italic" />
+
+        <!-- MOT DE PASSE -->
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MOT DE PASSE"
+            android:layout_marginLeft="12dp" />
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="********"
+            android:textColorHint="#AEABAB"
+
+            android:inputType="textPassword"
+            android:drawableLeft="@drawable/password_icon"
+            android:drawablePadding="10dp"
+            android:background="@drawable/round_corner"
+            android:layout_margin="8dp"
+            android:padding="15dp"
+            android:backgroundTint="#30B1AEAE"
+            android:textSize="16dp"
+            android:textStyle="italic" />
+
+
+
+        <!-- BOUTON SOUMETTRE -->
+        <Button
+            android:id="@+id/btnSoumettre"
+            android:layout_width="256dp"
+            android:layout_height="39dp"
+            android:text="Se connecter"
+            android:textColor="@color/white"
+            android:backgroundTint="#212020"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_bold"
+            android:textAllCaps="false"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="31dp"
+                android:fontFamily="@font/dm_sans"
+                android:text="Pas encore inscrit ?"
+                android:textAlignment="center"
+                android:layout_marginStart="35dp"
+                android:textSize="14.5sp"/>
+
+            <TextView
+                android:id="@+id/tvVersInscription"
+                android:layout_width="161dp"
+                android:layout_height="31dp"
+                android:fontFamily="@font/dm_sans"
+                android:text="  Inscrivez-vous ici."
+                android:clickable="true"
+                android:focusable="true"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
