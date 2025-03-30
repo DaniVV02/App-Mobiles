@@ -182,3 +182,70 @@ Bundle pour passer les informations du pays sélectionné.
 5️⃣ Gestion de la navigation dans Exo9Activity.kt, qui charge dynamiquement les fragments selon l’écran.
 
 
+
+## TP3
+
+L'enregistrement d'écran de ce TP est également présent dans ce dépôt.
+
+### Partie 1
+
+### Exercice 1
+
+Pour cet exercice, nous avons créé dans un premier temps trois fragments : **FragmentInscription.kt**, **FragmentLogin.kt** et **FragmentAffichage.kt**. Ces derniers sont gérés et affichés par **MainActivity.kt** ainsi que son layout **activity_main.xml** où on inclut la balise FrameLayout pour afficher ces différents fragments. 
+
+Il faut remarquer que pour cet exercice j'ai suivi la maquette suivante du site Canva avec quelques changements : https://www.canva.com/design/DAGi2L6iLb8/vT5X5IE4TpZj28QaZMHe4Q/edit
+
+Ensuite, pour que le bouton "Soumettre" sauvegarde les données de FragmentInscription dans une base de données, nous avons dû créer quelques fichiers suplémentaires. Tout d'abord, nous avons utilisé l'architecture Room + MVVM dans notre application Android pour gérer cette persistance de données.
+
+Nous avons donc créé ainsi un fichier **AppDB.kt** qui crée et fournit une instance unique de la base de données Room (singleton). 
+@Database: Définit les entités utilisées (Utilisateur, Planning) et la version. Nous avons défini également deux méthodes abstraites pour accéder aux DAOs (utilisateurDao() et planningDao()). Le companion object assure qu’il n’y ait qu’une seule instance de la base à tout moment (pattern Singleton).Et finalement fallbackToDestructiveMigration() supprime les anciennes données si le schéma change (version 1, 2, 3, etc.).
+
+Ensuite, il nous fallait créer notre "table SQL" appelée **Utilisateur.kt**, il s'agit en réalité d'une classe de données (@Entity) représentant un utilisateur dans la base de données Room.
+Chaque objet Utilisateur contient :
+
+- id: clé primaire auto-générée.
+
+- nom, nomUtilisateur, dateNaissance, telephone, email, motDePasse, centresInteret : toutes les infos nécessaires à l’inscription.
+
+Après, nous avons créé un fichier **UtilisateurDao.kt**, une interface qui définit les méthodes d’accès à la base de données Room pour la table utilisateur. Dans ce fichier nous avons les opérations CRUD : @Insert, @Update, @Delete. Voici une petite explication des méthodes (requêtes SQL) : 
+
+- supprimerParId(id) : supprime un utilisateur spécifique par son identifiant.
+
+- supprimerTous() : supprime tous les utilisateurs.
+
+- getAllUtilisateurs() : renvoie tous les utilisateurs sous forme de LiveData, ce qui permet de mettre à jour automatiquement l’interface dès qu’il y a un changement.
+
+- getUtilisateurById(id) ou getUtilisateurByEmail(email) : pour récupérer un utilisateur en particulier.
+
+- verifierLogin(identifiant, motDePasse) : vérifie si l’identifiant (email ou nom d’utilisateur) et mot de passe sont corrects.
+
+- existeEmail(email) / existeNomUtilisateur(...) : vérifient si un email ou nom d’utilisateur est déjà utilisé.
+
+- getPremierUtilisateur() : récupère le dernier utilisateur enregistré (le plus récent).
+
+
+Et finalement nous avons créé le fichier **UtilisateurViewModel.kt** qui sert de pont entre l’interface utilisateur (UI) et la base de données pour les utilisateurs. En fait, il récupère le DAO avec AppDB.getInstance(...), et contient LiveData<List<Utilisateur>> pour observer tous les utilisateurs (tousLesUtilisateurs). Les méthodes inserer, modifier, supprimer, supprimerTous lancent des coroutines dans le viewModelScope pour faire les opérations en tâche de fond.
+
+Ce fichier avec ses méthodes sera utilisé avec **ListeUtilisateursActivity.ky** où on pourra gérer les différents utilisateurs s'il s'agit de l'administrateur. Celui-ci est pré défini dans la base de données, si on se connecte en tant qu'administrateur, on pourra visualiser tous les utilisateurs inscrits ainsi que modifier leurs nom d'utilisateurs ou même les supprimer.
+
+
+### Exercice 2
+
+
+
+Voici une petite explication des méthodes (requêtes SQL) dans **PlanningDao.kt** : 
+
+- getDernierPlanning() → récupère le dernier planning ajouté pour un utilisateur.
+
+- getPlanningsParEmailOuUsername() → récupère tous les plannings pour un utilisateur selon son email ou son pseudo.
+
+- getAllPlannings() → expose une liste observable (LiveData) pour afficher automatiquement tous les plannings.
+
+- getById() → utile pour retrouver un planning spécifique.
+
+
+### Partie 2
+
+En cours...
+
+
