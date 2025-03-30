@@ -191,7 +191,7 @@ L'enregistrement d'écran de ce TP est également présent dans ce dépôt.
 
 ### Exercice 1
 
-Pour cet exercice, nous avons créé dans un premier temps trois fragments : **FragmentInscription.kt**, **FragmentLogin.kt** et **FragmentAffichage.kt**. Ces derniers sont gérés et affichés par **MainActivity.kt** ainsi que son layout **activity_main.xml** où on inclut la balise FrameLayout pour afficher ces différents fragments. 
+Pour cet exercice, nous avons créé dans un premier temps deux fragments : **FragmentInscription.kt** et **FragmentAffichage.kt**. Ces derniers sont gérés et affichés par **MainActivity.kt** ainsi que son layout **activity_main.xml** où on inclut la balise FrameLayout pour afficher ces différents fragments. 
 
 Il faut remarquer que pour cet exercice j'ai suivi la maquette suivante du site Canva avec quelques changements : https://www.canva.com/design/DAGi2L6iLb8/vT5X5IE4TpZj28QaZMHe4Q/edit
 
@@ -231,7 +231,13 @@ Ce fichier avec ses méthodes sera utilisé avec **ListeUtilisateursActivity.ky*
 
 ### Exercice 2
 
+Pour cet exercice nous avons rajouté un fragment **FragmentLogin.kt**, et nous avons rendu cliquables le texte : "Connectez-vous ici". Lorsqu'on clique cet élèment, le formulaire du Login apparaît. C'est pareil avec ce fragment avec le texte "Inscrivez-vous ici" qui nous emmène vers **FragmentInscription.kt**.
 
+Les vérifications indiquées dans l'exercice concernant certaines règles de champs de saisie ou de l'existence d'un utilisateur dans la base de données sont indiqués sous forme de "hint" dans les champs de saisie ou sous forme de **Toast** lorsqu'on clique sur le bouton en ne respectant pas ces règles.
+
+Ensuite, nous avons rajouté une fonctionnalité qui n'a pas été demandé mais qui est très utile lorsque nous avons l'existence d'un administrateur. Celui-ci peut avoir accès à certaines fonctionnalités additionnelles que des utilisateurs "normaux" n'ont pas. Pour ce TP, nous avons choisi la possibilité de se connecter en tant qu'administrateur. Celui-ci pourra visualiser ainsi que modifier ou éliminer des utilisateurs comme nous l'avons dit dans l'exercice précédent. Les utilisateurs "normaux" n'auront pas accès à ce bouton qui permet de visualiser tous les utilisateurs.
+
+Finalement, pour l'acitvité Planning, nous avons suivi la même méthodologie et architecture qu'avec Utilisateur. Nous avons donc créé **Planning.kt**, **PlanningViewModel**.kt et **PlanningDao.kt**.
 
 Voici une petite explication des méthodes (requêtes SQL) dans **PlanningDao.kt** : 
 
