@@ -81,7 +81,7 @@ class PlanningActivity : AppCompatActivity() {
             val planning = Planning(
                 userEmail = email,
                 username = nomUtilisateur,
-                jour = "Lundi",
+                jour = etJour.text.toString(),
                 creneau1 = et1.text.toString(),
                 creneau2 = et2.text.toString(),
                 creneau3 = et3.text.toString(),

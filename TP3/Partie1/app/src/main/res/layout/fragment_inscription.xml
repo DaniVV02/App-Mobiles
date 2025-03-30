@@ -267,6 +267,7 @@
             android:backgroundTint="#212020"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:fontFamily="@font/poppins_bold"/>
+            android:fontFamily="@font/poppins_bold"
+            android:background="@drawable/round_corner_general"/>
     </LinearLayout>
 </ScrollView>
